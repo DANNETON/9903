@@ -6,10 +6,13 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Space Station.unity
+    path: Assets/A.unity
     guid: a34eae48932b9d049b40aa976fad5914
   - enabled: 1
-    path: Assets/Space-Truth.unity
+    path: Assets/B.unity
+    guid: f252c1ec32d34c84baec02da8cd7de13
+  - enabled: 1
+    path: Assets/C.unity
     guid: 8e6d00d8f5fef0441b5f1cb91f231f2e
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 9e7be553448fa2546aea5752021cbcf7, type: 2}

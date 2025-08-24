@@ -172,7 +172,12 @@ public class RaycastInteractor : MonoBehaviour
         if (environmentHit != null)
         {
             RaycastHit hit;
-            if (Physics.Raycast(rayPointer.position, rayPointer.TransformDirection(Vector3.forward), out hit, rayLength, environmentLayer))
+            if (!Physics.Raycast(rayPointer.position, rayPointer.TransformDirection(Vector3.forward), out hit, rayLength, environmentLayer))
+            {
+                if (environmentHit != null)
+                    environmentHit.gameObject.SetActive(false);
+            }
+            else
             {
                 if (environmentHit != null)
                 {
@@ -180,11 +185,6 @@ public class RaycastInteractor : MonoBehaviour
                     environmentHit.position = hit.point;
                 }
 
-            }
-            else
-            {
-                if (environmentHit != null)
-                    environmentHit.gameObject.SetActive(false);
             }
         }
     }
